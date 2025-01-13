@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid Cafe Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f0fc;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffccf2;
+            text-align: center;
+            padding: 1rem;
+        }
+        header h1 {
+            margin: 0;
+            color: #b30086;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .filters {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .filters label {
+            font-weight: bold;
+        }
+        .schedule {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .schedule-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maid Cafe Schedule</h1>
+    </header>
+
+    <div class="container">
+        <div class="filters">
+            <div>
+                <label for="store-filter">Select Store:</label>
+                <select id="store-filter">
+                    <option value="all">All Stores</option>
+                    <option value="moemoekyun">모에모에큥</option>
+                    <option value="ohmy">오 마이</option>
+                    <option value="maidmoon">메이드문</option>
+                    <option value="maidstar">메이드스타</option>
+                    <option value="loveangel">러브엔젤</option>
+                    <option value="kawaii">카와이</option>
+                    <option value="chika">치카</option>
+                    <option value="matende">마텐데</option>
+                    <option value="dolls">돌즈</option>
+                    <option value="ayana">아야나</option>
+                    <option value="dokidoki">도키도키</option>
+                    <option value="maidpia">메이드피아</option>
+                    <option value="tomodachi">토모다치</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Select Maids:</label>
+                <div>
+                    <input type="checkbox" id="meg" value="meg">
+                    <label for="meg">메구</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="yua" value="yua">
+                    <label for="yua">유아</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mea" value="mea">
+                    <label for="mea">메아</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hime" value="hime">
+                    <label for="hime">히메</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="haruka" value="haruka">
+                    <label for="haruka">하루카</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="yuki" value="yuki">
+                    <label for="yuki">유키</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="eri" value="eri">
+                    <label for="eri">에리</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="ritsu" value="ritsu">
+                    <label for="ritsu">리츠</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="judi" value="judi">
+                    <label for="judi">주디</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="myu" value="myu">
+                    <label for="myu">뮤</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="chuchu" value="chuchu">
+                    <label for="chuchu">츄츄</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="rui" value="rui">
+                    <label for="rui">루이</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="momo" value="momo">
+                    <label for="momo">모모</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mii" value="mii">
+                    <label for="mii">미이</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="devi" value="devi">
+                    <label for="devi">데비</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="miu" value="miu">
+                    <label for="miu">미우</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="ever" value="ever">
+                    <label for="ever">에버</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="myei" value="myei">
+                    <label for="myei">먀이</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="asuka" value="asuka">
+                    <label for="asuka">아스카</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="miru" value="miru">
+                    <label for="miru">미루</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="pom" value="pom">
+                    <label for="pom">포무</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="yurinya" value="yurinya">
+                    <label for="yurinya">유리냐</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mayoi" value="mayoi">
+                    <label for="mayoi">마요이</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="achu" value="achu">
+                    <label for="achu">아츄</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="rei" value="rei">
+                    <label for="rei">레이</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="queen" value="queen">
+                    <label for="queen">퀸</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="haru" value="haru">
+                    <label for="haru">하루</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hina" value="hina">
+                    <label for="hina">히나</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="nemu" value="nemu">
+                    <label for="nemu">네무</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hikari" value="hikari">
+                    <label for="hikari">히카리</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cho" value="cho">
+                    <label for="cho">쵸</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule">
+            <h2>Schedule</h2>
+            <div id="schedule-list">
+                <
+
